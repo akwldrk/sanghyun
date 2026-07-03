@@ -204,3 +204,7 @@ footer p{
     margin-top:25px;
 
 }
+body{
+    opacity:0;
+    transition:opacity .8s ease;
+}
