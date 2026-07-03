@@ -208,3 +208,38 @@ body{
     opacity:0;
     transition:opacity .8s ease;
 }
+.logo img{
+
+width:180px;
+
+margin-bottom:30px;
+
+}
+
+.healy-image{
+
+width:220px;
+
+margin-top:20px;
+
+}
+
+.qr{
+
+text-align:center;
+
+padding:80px;
+
+background:#fff;
+
+}
+
+.qr img{
+
+width:180px;
+
+border-radius:20px;
+
+box-shadow:0 20px 40px rgba(0,0,0,.1);
+
+}
