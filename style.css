@@ -226,9 +226,24 @@ body{
 
     max-width:1200px;
 
-    margin:auto;
+    margin:80px auto;
 
-    padding:120px 30px;
+    padding:70px;
+
+    border-radius:30px;
+
+    background:white;
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+}
+
+.section:hover{
+
+    transform:translateY(-10px);
 
 }
 
