@@ -134,7 +134,8 @@ ul{
     overflow:hidden;
 
     background:
-    linear-gradient(135deg,#081B18,#0B5A45,#123E35);
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("assets/images/hero.jpg") center/cover no-repeat;
 
 }
 
