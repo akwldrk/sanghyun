@@ -527,3 +527,67 @@ ul{
     line-height:1.8;
 
 }
+
+/* ===========================
+   EXPORT
+=========================== */
+
+.export{
+
+    max-width:1200px;
+
+    margin:140px auto;
+
+    padding:0 40px;
+
+}
+
+.timeline{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+.timeline-item{
+
+    background:#102924;
+
+    border-radius:25px;
+
+    padding:40px;
+
+    text-align:center;
+
+}
+
+.circle{
+
+    width:70px;
+
+    height:70px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#2ECC71;
+
+    color:#081B18;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
