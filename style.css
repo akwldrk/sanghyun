@@ -232,15 +232,12 @@ ul{
 .hero-buttons{
 
     display:flex;
-
     justify-content:center;
-
     gap:18px;
-
     flex-wrap:wrap;
+    margin-top:40px;
 
 }
-
 .hero-buttons a{
 
     padding:16px 34px;
