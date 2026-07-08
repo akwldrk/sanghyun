@@ -18,6 +18,7 @@ body{
     color:#fff;
     overflow-x:hidden;
     line-height:1.6;
+    min-height:100vh;
 }
 
 a{
