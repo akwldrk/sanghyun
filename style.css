@@ -662,10 +662,14 @@ ul{
 
 }
 
+/* EXPORT */
+
 .timeline-item{
 
-    transition:.35s;
+    background:#102924;
+    ...
 
+    transition:.35s;
 }
 
 .timeline-item:hover{
