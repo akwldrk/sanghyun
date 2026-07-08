@@ -658,3 +658,17 @@ ul{
 }
 
 }
+
+.timeline-item{
+
+    transition:.35s;
+
+}
+
+.timeline-item:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
