@@ -194,35 +194,21 @@ body{
 
 /* ---------------- BUTTON ---------------- */
 
-.buttons{
-
-    margin-top:45px;
-
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:15px;
-
-}
-
 .buttons a{
 
-    text-decoration:none;
+    backdrop-filter:blur(14px);
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.25);
 
     color:white;
 
-    background:#16A34A;
+    padding:16px 34px;
 
-    padding:15px 34px;
+    border-radius:50px;
 
-    border-radius:40px;
-
-    transition:.3s;
-
-    font-weight:600;
+    transition:.35s;
 
 }
 
@@ -231,8 +217,6 @@ body{
     background:white;
 
     color:#0B5A45;
-
-    transform:translateY(-3px);
 
 }
 
