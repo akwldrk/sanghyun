@@ -266,3 +266,47 @@ ul{
     transform:translateY(-4px);
 
 }
+
+/* ===========================
+   SCROLL
+=========================== */
+
+.scroll{
+
+    margin-top:60px;
+
+    color:#ffffff;
+
+    letter-spacing:4px;
+
+    animation:scrollMove 2s infinite;
+
+}
+
+@keyframes scrollMove{
+
+    0%{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:translateY(12px);
+
+        opacity:.6;
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+}
