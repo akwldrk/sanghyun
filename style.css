@@ -356,3 +356,31 @@ padding:70px 25px;
 }
 
 }
+/* ========= Animation ========= */
+
+body{
+    opacity:0;
+    transition:opacity .8s ease;
+}
+
+body.loaded{
+    opacity:1;
+}
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:all .9s ease;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
