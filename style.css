@@ -258,6 +258,8 @@ ul{
 
     font-weight:600;
 
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
 }
 
 .hero-buttons a:hover{
