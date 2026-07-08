@@ -683,3 +683,49 @@ ul{
     font-weight:700;
 
 }
+
+/* ===========================
+   TOP BUTTON
+=========================== */
+
+#topBtn{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#2ECC71;
+
+    color:#081B18;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    display:none;
+
+    z-index:999;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+    transition:.3s;
+
+}
+
+#topBtn:hover{
+
+    transform:translateY(-5px);
+
+    background:#39e67d;
+
+}
