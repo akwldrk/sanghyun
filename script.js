@@ -89,3 +89,37 @@ window.addEventListener("scroll",()=>{
     }
 
 });
+
+// 숫자 카운터
+
+const counters=document.querySelectorAll(".counter");
+
+counters.forEach(counter=>{
+
+    const update=()=>{
+
+        const target=+counter.dataset.target;
+
+        const count=+counter.innerText;
+
+        const speed=25;
+
+        const inc=Math.ceil(target/speed);
+
+        if(count<target){
+
+            counter.innerText=count+inc;
+
+            setTimeout(update,40);
+
+        }else{
+
+            counter.innerText=target+"+";
+
+        }
+
+    }
+
+    update();
+
+});
