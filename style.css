@@ -91,6 +91,8 @@ body{
 
 .hero{
 
+    position:relative;
+
     height:100vh;
 
     display:flex;
@@ -101,22 +103,37 @@ body{
 
     text-align:center;
 
+    overflow:hidden;
+
     background:
-    linear-gradient(rgba(5,30,20,.75),rgba(5,30,20,.65)),
-    linear-gradient(135deg,#0B5A45,#111827);
+        radial-gradient(circle at top,#1a7b5d 0%,#0B5A45 35%,#08131f 100%);
 
     color:white;
 
-    padding:20px;
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.45));
+
+    z-index:0;
 
 }
 
 .hero-text{
 
-    max-width:850px;
+    position:relative;
+
+    z-index:2;
 
 }
-
 .mini{
 
     letter-spacing:8px;
