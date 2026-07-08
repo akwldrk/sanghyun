@@ -220,3 +220,49 @@ ul{
     font-size:18px;
 
 }
+
+/* ===========================
+   HERO BUTTON
+=========================== */
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-buttons a{
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    color:#fff;
+
+    transition:.35s;
+
+    font-weight:600;
+
+}
+
+.hero-buttons a:hover{
+
+    background:#2ECC71;
+
+    color:#081B18;
+
+    transform:translateY(-4px);
+
+}
