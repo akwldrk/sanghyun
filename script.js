@@ -1,125 +1,90 @@
-// ================================
-// KSH Mobility & Wellness
-// Premium Animation v2
-// ================================
+/* ======================================
+   KSH Mobility & Wellness
+   script.js
+====================================== */
 
-// 페이지 로드 애니메이션
-window.addEventListener("load", () => {
-    document.body.classList.add("loaded");
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* =============================
+       Navbar Scroll Effect
+    ============================== */
+
+    const navbar = document.querySelector(".navbar");
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 80) {
+
+            navbar.style.background = "rgba(8,27,24,.95)";
+            navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,.35)";
+
+        } else {
+
+            navbar.style.background = "rgba(8,27,24,.75)";
+            navbar.style.boxShadow = "none";
+
+        }
+
+    });
+
 });
 
-// 섹션 등장 애니메이션
-const sections = document.querySelectorAll(".section");
+/* =============================
+   Counter Animation
+============================= */
+
+const counters = document.querySelectorAll(".counter");
+
+const speed = 120;
+
+const startCounter = (counter) => {
+
+    const target = Number(counter.dataset.target);
+
+    let current = 0;
+
+    const update = () => {
+
+        const increment = Math.ceil(target / speed);
+
+        current += increment;
+
+        if (current >= target) {
+
+            counter.textContent = target + "+";
+
+        } else {
+
+            counter.textContent = current;
+
+            requestAnimationFrame(update);
+
+        }
+
+    };
+
+    update();
+
+};
 
 const observer = new IntersectionObserver((entries) => {
 
     entries.forEach(entry => {
 
-        if(entry.isIntersecting){
+        if (entry.isIntersecting) {
 
-            entry.target.classList.add("show");
+            startCounter(entry.target);
 
-        }
-
-    });
-
-},{
-    threshold:0.2
-});
-
-sections.forEach(section=>{
-
-    section.classList.add("hidden");
-
-    observer.observe(section);
-
-});
-
-// 메뉴 스크롤 이동
-document.querySelectorAll('.navbar a').forEach(anchor=>{
-
-    anchor.addEventListener("click",function(e){
-
-        e.preventDefault();
-
-        const target=document.querySelector(this.getAttribute("href"));
-
-        target.scrollIntoView({
-
-            behavior:"smooth"
-
-        });
-
-    });
-
-});
-
-// 버튼 클릭 효과
-document.querySelectorAll(".buttons a").forEach(btn=>{
-
-    btn.addEventListener("mousedown",()=>{
-
-        btn.style.transform="scale(.96)";
-
-    });
-
-    btn.addEventListener("mouseup",()=>{
-
-        btn.style.transform="scale(1)";
-
-    });
-
-});
-
-// Navbar 색상 변경
-window.addEventListener("scroll",()=>{
-
-    const nav=document.querySelector(".navbar");
-
-    if(window.scrollY>80){
-
-        nav.style.background="rgba(255,255,255,.97)";
-        nav.style.boxShadow="0 10px 30px rgba(0,0,0,.08)";
-
-    }else{
-
-        nav.style.background="rgba(255,255,255,.88)";
-        nav.style.boxShadow="0 3px 20px rgba(0,0,0,.05)";
-
-    }
-
-});
-
-// 숫자 카운터
-
-const counters=document.querySelectorAll(".counter");
-
-counters.forEach(counter=>{
-
-    const update=()=>{
-
-        const target=+counter.dataset.target;
-
-        const count=+counter.innerText;
-
-        const speed=25;
-
-        const inc=Math.ceil(target/speed);
-
-        if(count<target){
-
-            counter.innerText=count+inc;
-
-            setTimeout(update,40);
-
-        }else{
-
-            counter.innerText=target+"+";
+            observer.unobserve(entry.target);
 
         }
 
-    }
+    });
 
-    update();
+}, {
+
+    threshold: 0.5
 
 });
+
+counters.forEach(counter => observer.observe(counter));
