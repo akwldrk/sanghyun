@@ -162,13 +162,31 @@ body{
 
 }
 
-.hero h2{
+.section h2{
 
-    margin-top:10px;
+    font-size:44px;
 
-    font-weight:300;
+    color:#0B5A45;
 
-    letter-spacing:4px;
+    margin-bottom:25px;
+
+}
+
+.section h3{
+
+    font-size:30px;
+
+    margin-bottom:20px;
+
+}
+
+.section p{
+
+    font-size:20px;
+
+    color:#666;
+
+    line-height:1.9;
 
 }
 
