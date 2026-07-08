@@ -379,7 +379,8 @@ ul{
 
 .stat-box{
 
-    width:220px;
+    width:100%;
+    max-width:300px;
 
     background:#102924;
 
