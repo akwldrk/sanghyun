@@ -377,3 +377,45 @@ ul{
     justify-content:center;
 
 }
+
+.stat-box{
+
+    width:220px;
+
+    background:#102924;
+
+    border-radius:20px;
+
+    padding:45px 20px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.stat-box:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+.stat-box h2{
+
+    font-size:56px;
+
+    color:#2ECC71;
+
+    margin-bottom:15px;
+
+}
+
+.stat-box p{
+
+    color:#cccccc;
+
+}
