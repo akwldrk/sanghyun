@@ -664,14 +664,6 @@ ul{
 
 /* EXPORT */
 
-.timeline-item{
-
-    background:#102924;
-    ...
-
-    transition:.35s;
-}
-
 .timeline-item:hover{
 
     transform:translateY(-10px);
