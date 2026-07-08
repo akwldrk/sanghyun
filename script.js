@@ -88,3 +88,79 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 counters.forEach(counter => observer.observe(counter));
+
+/* =============================
+   Fade In Animation
+============================= */
+
+const fadeElements = document.querySelectorAll(
+    ".about, .service-card, .timeline-item, .contact-card"
+);
+
+fadeElements.forEach(el => {
+
+    el.style.opacity = "0";
+    el.style.transform = "translateY(40px)";
+    el.style.transition = "all .8s ease";
+
+});
+
+const fadeObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+
+        }
+
+    });
+
+}, {
+
+    threshold:0.2
+
+});
+
+fadeElements.forEach(el => fadeObserver.observe(el));
+
+/* =============================
+   Smooth Active Menu
+============================= */
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".navbar a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const top = section.offsetTop - 120;
+
+        const height = section.offsetHeight;
+
+        if (window.scrollY >= top) {
+
+            current = section.getAttribute("id");
+
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
