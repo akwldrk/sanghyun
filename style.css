@@ -319,23 +319,21 @@ body{
 
 footer{
 
-    margin-top:80px;
-
-    background:#111827;
+    background:#08131f;
 
     color:white;
 
     text-align:center;
 
-    padding:80px 20px;
+    padding:90px 30px;
 
 }
 
 footer h2{
 
-    margin-bottom:25px;
+    font-size:36px;
 
-    font-size:34px;
+    margin-bottom:20px;
 
 }
 
